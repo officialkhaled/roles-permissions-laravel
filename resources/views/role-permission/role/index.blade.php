@@ -1,9 +1,9 @@
 <x-app-layout>
 
     <div class="container mt-5">
-        <a href="{{ url('roles') }}" class="btn btn-primary mx-1">Roles</a>
-        <a href="{{ url('permissions') }}" class="btn btn-info mx-1">Permissions</a>
-        <a href="{{ url('users') }}" class="btn btn-warning mx-1">Users</a>
+        <a href="{{ route('permissions.index') }}" class="btn btn-primary btn-sm mx-1">Permissions</a>
+        <a href="{{ route('roles.index') }}" class="btn btn-warning btn-sm mx-1">Roles</a>
+        <a href="{{ route('users.index') }}" class="btn btn-success btn-sm mx-1">Users</a>
     </div>
 
     <div class="container mt-2">
@@ -14,7 +14,7 @@
                     <div class="alert alert-success">{{ session('status') }}</div>
                 @endif
 
-                <div class="card mt-3">
+                <div class="card mt-3 mb-6">
                     <div class="card-header">
                         <h4>
                             Roles
@@ -23,8 +23,8 @@
                             @endcan
                         </h4>
                     </div>
-                    <div class="card-body">
 
+                    <div class="card-body">
                         <table class="table table-bordered table-striped">
                             <thead>
                             <tr>
@@ -59,8 +59,8 @@
                             @endforeach
                             </tbody>
                         </table>
-
                     </div>
+
                 </div>
             </div>
         </div>

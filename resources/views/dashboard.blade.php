@@ -11,7 +11,14 @@
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
                 </div>
+
+                <div class="flex gap-2 justify-center p-4">
+                    <a href="{{ route('permissions.index') }}" class="btn btn-sm btn-primary">Permissions</a>
+                    <a href="{{ route('roles.index') }}" class="btn btn-sm btn-warning">Roles</a>
+                    <a href="{{ route('users.index') }}" class="btn btn-sm btn-success">Users</a>
+                </div>
             </div>
         </div>
     </div>
+
 </x-app-layout>
