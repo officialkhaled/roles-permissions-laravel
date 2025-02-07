@@ -194,6 +194,6 @@ php artisan db:seed --class="UserRolePermissionSeeder"
 ```
 
 
-## License
+## Credits
 
-This project is open-source and available under the MIT License.
+[Funda of Webit](https://www.fundaofwebit.com/post/laravel-10-spatie-user-roles-and-permissions-tutorial)
