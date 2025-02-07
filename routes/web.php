@@ -16,15 +16,15 @@ Route::get('/dashboard', function () {
 
 Route::group(['middleware' => ['role:super-admin|admin']], function () {
     Route::resource('permissions', PermissionController::class);
-    Route::get('permissions/{permissionId}/delete', [PermissionController::class, 'destroy']);
+    Route::get('permissions/{permission}/delete', [PermissionController::class, 'destroy']);
 
     Route::resource('roles', RoleController::class);
-    Route::get('roles/{roleId}/delete', [RoleController::class, 'destroy']);
-    Route::get('roles/{roleId}/give-permissions', [RoleController::class, 'addPermissionToRole']);
-    Route::put('roles/{roleId}/give-permissions', [RoleController::class, 'givePermissionToRole']);
+    Route::get('roles/{role}/delete', [RoleController::class, 'destroy']);
+    Route::get('roles/{role}/give-permissions', [RoleController::class, 'addPermissionToRole']);
+    Route::put('roles/{role}/give-permissions', [RoleController::class, 'givePermissionToRole']);
 
     Route::resource('users', UserController::class);
-    Route::get('users/{userId}/delete', [UserController::class, 'destroy']);
+    Route::get('users/{user}/delete', [UserController::class, 'destroy']);
 });
 
 Route::middleware('auth')->group(function () {
