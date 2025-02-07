@@ -2,9 +2,9 @@
 
 ## Installation
 
-1. Create Laravel Project
+1. Create a Laravel Project
 ```bash
-laravel new example-app
+composer create-project "laravel/laravel:^10.0" example-app
 ```
 
 2. Install Dependencies (Starter Kit: Breeze)
@@ -13,7 +13,7 @@ composer require laravel/breeze --dev
 php artisan breeze:install blade
 ```
 
-3. Set Up Environment & Run the application
+3. Set up the Environment & Run the application
 ```bash
 npm install
 
